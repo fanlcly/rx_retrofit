@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--透明dialog样式-->
+    <style name="TransDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/transparent</item><!--背景透明，没毛边-->
+        <item name="android:backgroundDimEnabled" tools:ignore="NewApi">false</item><!--不允许背景变暗-->
+    </style>
+
+
+
+</resources>
