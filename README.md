@@ -49,7 +49,7 @@ ApiService如下(rxjava 格式)：
 
         public interface ApiService {
         
-            @POST("api/totalEmployInfo")
+            @POST("url")
             Call<List<Entity> getData();
         }
 
