@@ -1,15 +1,17 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 30
 
 
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 26
+        targetSdkVersion 30
         versionCode 1
-        versionName "1.0"
+        versionName "2.0.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -22,26 +24,34 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    compileOnly 'org.jetbrains:annotations-java5:15.0'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.0.2'
 
-    compileOnly 'org.jetbrains:annotations-java5:15.0'
-    compileOnly 'com.android.support:support-v4:+'
-
-    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    api 'io.reactivex.rxjava2:rxjava:2.2.3'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.0'
 
     //retrofit
-    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    api 'com.squareup.retrofit2:retrofit:2.9.0'
     //Gson converter
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    api 'com.squareup.retrofit2:converter-gson:2.9.0'
     //RxJava2 Adapter
-//    compile 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
-    compile'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    api'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
     //okhttp
-    compile 'com.squareup.okhttp3:okhttp:3.4.1'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
-
+    api 'com.squareup.okhttp3:okhttp:3.14.9'
+    api 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    implementation 'androidx.annotation:annotation:1.2.0'
+}
+repositories {
+    mavenCentral()
 }

@@ -2,5 +2,6 @@
 <resources>
 
     <color name="transparent">#00000000</color>
+    <color name="color_loading_status">#FFCCCCCC</color>
 
 </resources>

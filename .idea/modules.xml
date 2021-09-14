@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Retrofit_Client.iml" filepath="$PROJECT_DIR$/Retrofit_Client.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rx_retrofit.iml" filepath="$PROJECT_DIR$/rx_retrofit.iml" group="rx_retrofit" />
+      <module fileurl="file://$PROJECT_DIR$/app/rx_retrofit-app.iml" filepath="$PROJECT_DIR$/app/rx_retrofit-app.iml" group="rx_retrofit/app" />
+      <module fileurl="file://$PROJECT_DIR$/rxretrofit/rx_retrofit-rxretrofit.iml" filepath="$PROJECT_DIR$/rxretrofit/rx_retrofit-rxretrofit.iml" group="rx_retrofit/rxretrofit" />
       <module fileurl="file://$PROJECT_DIR$/rxretrofit/rxretrofit.iml" filepath="$PROJECT_DIR$/rxretrofit/rxretrofit.iml" />
     </modules>
   </component>
