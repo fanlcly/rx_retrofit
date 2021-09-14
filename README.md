@@ -1,9 +1,18 @@
-# rx_retrofit
+# rx_retrofit2.0版本来啦
+# rx_retrofit2.0版本来啦
+# rx_retrofit2.0版本来啦
 
-rxjava2.0和retrofit2.0兼容的网络框架,即能使用仅基于retrofit的封装，又可以使用基本retrofit+rxjava的封装
+##功能：
+###1：响应方式：普通方式（call），rxjava的方式
+###2：请求头你可以随意添加
+###3，支持多url
+###4，已经集成了默认loading，当然你也可以自定义
+###5，已经集成了格式化之后logger。
+###6，关于retrofit部分请参考retrofit官方文档
+
 ------
 
-# 使用
+## 使用
 
 1.将其添加到project的build.gradle中。
 
@@ -26,95 +35,15 @@ rxjava2.0和retrofit2.0兼容的网络框架,即能使用仅基于retrofit的封
 2.添加依赖到APP的build.gradle中。
 
 	dependencies {
-		implementation 'com.github.fanlcly:rx_retrofit:0.0.1'
+		implementation 'com.github.fanlcly:rx_retrofit:2.0.0'
 	}
 或者
 
 	<dependency>
 	    <groupId>com.github.fanlcly</groupId>
 	    <artifactId>rx_retrofit</artifactId>
-	    <version>0.0.1</version>
+	    <version>2.0.0</version>
 	</dependency>
 
-3.在自己的项目中，创建自己的ApiService和http基类
-ApiService如下(rxjava 格式)：
 
-        public interface ApiService {
-        
-            @GET("url")
-            Observable<Response<List<Entity>>> getData();
-        }
-
-或者（retrofit 格式）：
-
-        public interface ApiService {
-        
-            @POST("url")
-            Call<List<Entity> getData();
-        }
-
-
-http基类如下：
-
-        public class HttpClient {
-            private static HttpClient singleHttp = null;
-            private HttpClient() {
-            }
-        
-            public static HttpClient getInstance() {
-                if (singleHttp == null) {
-                    synchronized (HttpClient.class) {
-                        if (singleHttp == null) {
-                            singleHttp = new HttpClient();
-                        }
-                    }
-                }
-                return singleHttp;
-            }
-        
-        
-            public  ApiService getRetrofitService() {
-        
-                Retrofit retrofit = HttpRetrofit.getInstance().getRetrofit("baseUrl"
-                        , new TokenInterceptor(), // 添加自己的过滤器
-                        true);
-        
-                return retrofit.create(ApiService.class);
-            }
-        
-        }
-
-4，在activity中使用
-
-rxjava方式：
-
-         Observable observable = HttpClient.getInstance().getRetrofitService().getData();
-            HttpRetrofit.getInstance().toSubscribe(observable, new RxBaseCallBack<List<Entity>>(getApplicationContext()) {
-                    @Override
-                    public void onSuc(Response<List<Entity>> response) {
-                            // 自己的业务逻辑
-                        }
-                    }
-        
-                    @Override
-                    public void onFail(Response response, String message, int failCode) {
-                        ToastUtils.init(MainActivity.this).show("onFail");
-                    }
-        
-                });
-
-
-retrofit方式：
-
-    Call<List<Entity>> call =  RetrofitHelper.getRetrofitService().getData();
-    call.enqueue(new BaseCallBack<List<Entity>>(mActivity) {
-        @Override
-        public void onSuc(Response<BaseCallModel<UserInfo>> response) {
-           // 自己的业务逻辑
-        }
-        @Override
-        public void onFail(Response<BaseCallModel<UserInfo>> response,String message, int failCode) {
-            ToastUtils.getInstance(mActivity).show(message);
-        }
-    });
 
