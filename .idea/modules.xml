@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Retrofit_Client.iml" filepath="$PROJECT_DIR$/Retrofit_Client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/rx_retrofit.iml" filepath="$PROJECT_DIR$/rx_retrofit.iml" group="rx_retrofit" />
-      <module fileurl="file://$PROJECT_DIR$/app/rx_retrofit-app.iml" filepath="$PROJECT_DIR$/app/rx_retrofit-app.iml" group="rx_retrofit/app" />
-      <module fileurl="file://$PROJECT_DIR$/rxretrofit/rx_retrofit-rxretrofit.iml" filepath="$PROJECT_DIR$/rxretrofit/rx_retrofit-rxretrofit.iml" group="rx_retrofit/rxretrofit" />
-      <module fileurl="file://$PROJECT_DIR$/rxretrofit/rxretrofit.iml" filepath="$PROJECT_DIR$/rxretrofit/rxretrofit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rx_retrofit.iml" filepath="$PROJECT_DIR$/.idea/modules/rx_retrofit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/rx_retrofit.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/rx_retrofit.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/rx_retrofit.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/rx_retrofit.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/rx_retrofit.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/rx_retrofit.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/rx_retrofit.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/rx_retrofit.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rxretrofit/rx_retrofit.rxretrofit.iml" filepath="$PROJECT_DIR$/.idea/modules/rxretrofit/rx_retrofit.rxretrofit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rxretrofit/rx_retrofit.rxretrofit.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/rxretrofit/rx_retrofit.rxretrofit.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rxretrofit/rx_retrofit.rxretrofit.main.iml" filepath="$PROJECT_DIR$/.idea/modules/rxretrofit/rx_retrofit.rxretrofit.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rxretrofit/rx_retrofit.rxretrofit.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/rxretrofit/rx_retrofit.rxretrofit.unitTest.iml" />
     </modules>
   </component>
 </project>

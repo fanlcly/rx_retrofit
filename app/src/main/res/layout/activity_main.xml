@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_json"
+            style="@style/btn"
+            android:layout_weight="1"
+            android:text="json请求" />
+
+        <Button
+            android:id="@+id/btn_parse"
+            style="@style/btn"
+            android:layout_weight="1"
+            android:text="适配请求" />
+
+
+    </LinearLayout>
 
 
     <LinearLayout
@@ -9,19 +30,21 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn1"
-            style="@style/btn"
-            android:text="请求" />
-
         <TextView
-            android:id="@+id/tv1"
+            android:id="@+id/tv_json"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
             android:text="response显示区域"
             android:textColor="@color/black"
             android:textSize="14dp" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </LinearLayout>
+
 
 </LinearLayout>
